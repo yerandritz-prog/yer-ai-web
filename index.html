@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yer.AI — Automatizacion e Inteligencia Artificial para Empresas</title>
+    <title>Yer.AI — Automatización e Inteligencia Artificial para Empresas</title>
     <meta name="description" content="Agencia de inteligencia artificial en Mallorca. Agentes de IA, automatizaciones, desarrollo web y SEO para empresas que quieren crecer.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,7 +84,7 @@
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: background 0.2s;
+            transition: background 0.2s, border-color 0.2s;
             border: 2px solid var(--text);
         }
         .nav-cta:hover { background: var(--accent); border-color: var(--accent); }
@@ -109,7 +109,6 @@
             padding: 16px 40px 24px;
             z-index: 99;
             flex-direction: column;
-            gap: 0;
         }
         .mobile-menu.open { display: flex; }
         .mobile-menu a {
@@ -136,7 +135,9 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
         }
 
         .hero-badge {
@@ -153,12 +154,13 @@
 
         .hero h1 {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+            font-size: clamp(1.3rem, 6.2vw, 2.4rem);
             font-weight: 800;
-            line-height: 1.05;
-            letter-spacing: -2px;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
             margin-bottom: 28px;
             text-transform: uppercase;
+            max-width: 100%;
         }
         .hero h1 em {
             font-style: normal;
@@ -191,12 +193,10 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             border: 2px solid var(--accent);
-            transition: background 0.2s, color 0.2s;
+            transition: background 0.2s, border-color 0.2s;
+            display: inline-block;
         }
-        .btn-primary:hover {
-            background: var(--accent-dark);
-            border-color: var(--accent-dark);
-        }
+        .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 
         .btn-secondary {
             background: transparent;
@@ -210,11 +210,9 @@
             text-transform: uppercase;
             border: 2px solid var(--text);
             transition: background 0.2s, color 0.2s;
+            display: inline-block;
         }
-        .btn-secondary:hover {
-            background: var(--text);
-            color: #fff;
-        }
+        .btn-secondary:hover { background: var(--text); color: #fff; }
 
         /* ──────────────── LAYOUT ──────────────── */
         section {
@@ -234,47 +232,44 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--accent);
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .section-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 3.8vw, 3rem);
+            font-size: clamp(1.9rem, 3.2vw, 2.8rem);
             font-weight: 800;
             letter-spacing: -1.5px;
             line-height: 1.08;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .section-subtitle {
             font-size: 1rem;
             color: var(--text-secondary);
             line-height: 1.75;
-            max-width: 520px;
         }
 
         /* ──────────────── SERVICES ──────────────── */
         .services-header {
             margin-bottom: 56px;
         }
+        .services-header .section-subtitle { max-width: 520px; }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 0;
+            grid-template-columns: repeat(4, 1fr);
             border-left: 1.5px solid var(--border);
         }
 
         .service-card {
-            padding: 36px 32px;
+            padding: 36px 28px;
             border-top: 3px solid var(--text);
             border-right: 1.5px solid var(--border);
             transition: background 0.2s;
         }
-        .service-card:hover {
-            background: var(--bg-alt);
-        }
+        .service-card:hover { background: var(--bg-alt); }
 
         .service-number {
             font-family: 'Syne', sans-serif;
@@ -288,23 +283,22 @@
 
         .service-card h3 {
             font-family: 'Syne', sans-serif;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 800;
             margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.3px;
+            line-height: 1.3;
         }
         .service-card p {
             font-size: 0.855rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.72;
             font-weight: 400;
         }
 
         /* ──────────────── PROCESS ──────────────── */
-        .process {
-            background: var(--bg-alt);
-        }
+        .process { background: var(--bg-alt); }
 
         .process-header {
             display: grid;
@@ -313,22 +307,25 @@
             align-items: end;
             margin-bottom: 64px;
         }
+        .process-header .section-title {
+            font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+        }
 
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 0;
             border-top: 1.5px solid var(--border);
         }
 
         .step {
-            padding: 36px 32px 36px 0;
+            padding: 36px 28px 36px 0;
             border-bottom: 1.5px solid var(--border);
         }
 
         .step-number {
             font-family: 'Syne', sans-serif;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             font-weight: 800;
             color: var(--accent);
             line-height: 1;
@@ -337,7 +334,7 @@
         }
         .step h3 {
             font-family: 'Syne', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 800;
             margin-bottom: 10px;
             text-transform: uppercase;
@@ -346,7 +343,7 @@
         .step p {
             font-size: 0.855rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.72;
         }
 
         /* ──────────────── ABOUT ──────────────── */
@@ -358,7 +355,6 @@
         }
 
         .about-text .section-title { margin-bottom: 24px; }
-
         .about-text p {
             color: var(--text-secondary);
             line-height: 1.8;
@@ -370,7 +366,6 @@
         .about-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0;
             border: 1.5px solid var(--border);
         }
 
@@ -388,7 +383,7 @@
             font-size: 2rem;
             font-weight: 800;
             color: var(--accent);
-            letter-spacing: -1.5px;
+            letter-spacing: -1px;
             line-height: 1;
             margin-bottom: 10px;
         }
@@ -396,15 +391,14 @@
             font-size: 0.78rem;
             color: var(--text-secondary);
             line-height: 1.55;
-            font-weight: 400;
         }
 
         /* ──────────────── CONTACT ──────────────── */
         .contact {
             background: var(--text);
             color: #fff;
+            border-bottom: none;
         }
-
         .contact .section-label { color: var(--accent); }
         .contact .section-title { color: #fff; }
         .contact .section-subtitle { color: rgba(255,255,255,0.5); }
@@ -416,7 +410,6 @@
             align-items: start;
         }
 
-        .contact-info { padding-top: 8px; }
         .contact-info .section-subtitle { margin-bottom: 40px; }
 
         .contact-detail {
@@ -424,20 +417,20 @@
             padding: 16px 0;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 5px;
         }
         .contact-detail:last-child { border-bottom: 1px solid rgba(255,255,255,0.12); }
-        .contact-detail span:first-child {
-            font-size: 0.68rem;
-            font-weight: 600;
+        .contact-detail .detail-label {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-            font-family: 'Syne', sans-serif;
+            color: rgba(255,255,255,0.35);
         }
-        .contact-detail span:last-child {
+        .contact-detail .detail-value {
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.85);
+            color: rgba(255,255,255,0.82);
         }
 
         .contact-form {
@@ -454,13 +447,13 @@
 
         .form-group label {
             display: block;
-            font-size: 0.68rem;
-            font-weight: 600;
+            font-family: 'Syne', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.35);
             margin-bottom: 8px;
-            font-family: 'Syne', sans-serif;
         }
 
         .form-group input,
@@ -468,7 +461,7 @@
         .form-group select {
             width: 100%;
             background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.14);
             border-radius: 0;
             padding: 13px 14px;
             color: #fff;
@@ -479,17 +472,12 @@
             -webkit-appearance: none;
         }
         .form-group input::placeholder,
-        .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+        .form-group textarea::placeholder { color: rgba(255,255,255,0.22); }
         .form-group input:focus,
         .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--accent);
-        }
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        .form-group select option { background: #111; }
+        .form-group select:focus { border-color: var(--accent); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-group select option { background: #111; color: #fff; }
 
         .btn-submit {
             background: var(--accent);
@@ -502,7 +490,7 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.2s, border-color 0.2s;
             width: 100%;
         }
         .btn-submit:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
@@ -510,7 +498,7 @@
         /* ──────────────── FOOTER ──────────────── */
         footer {
             background: var(--text);
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.08);
             padding: 28px 40px;
         }
         .footer-inner {
@@ -532,7 +520,7 @@
         .footer-logo span { color: var(--accent); }
         .footer-text {
             font-size: 0.78rem;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.32);
         }
         .footer-links {
             display: flex;
@@ -540,68 +528,62 @@
             list-style: none;
         }
         .footer-links a {
+            font-family: 'Syne', sans-serif;
             font-size: 0.72rem;
             font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.32);
             text-decoration: none;
             transition: color 0.2s;
-            font-family: 'Syne', sans-serif;
         }
-        .footer-links a:hover { color: rgba(255,255,255,0.8); }
+        .footer-links a:hover { color: rgba(255,255,255,0.75); }
 
         /* ──────────────── RESPONSIVE ──────────────── */
+        @media (min-width: 600px) {
+            .hero h1 { font-size: clamp(2.2rem, 2.7vw, 3.4rem); letter-spacing: -1.5px; }
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .step:nth-child(3),
+            .step:nth-child(4) { border-bottom: none; }
+        }
+
         @media (max-width: 900px) {
-            .process-header {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
+            .process-header { grid-template-columns: 1fr; gap: 20px; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
         }
 
         @media (max-width: 768px) {
             nav { padding: 0 24px; }
             .nav-links, .nav-cta { display: none; }
             .nav-toggle { display: block; }
-
             .mobile-menu { padding: 16px 24px 24px; }
 
             .hero { padding: 100px 24px 72px; }
             section { padding: 72px 24px; }
-            footer { padding: 24px 24px; }
+            footer { padding: 24px; }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-                border-left: none;
-            }
-            .service-card { border-right: none; border-left: none; }
+            .services-grid { grid-template-columns: 1fr; border-left: none; }
+            .service-card { border-right: none; }
 
             .process-grid { grid-template-columns: 1fr; }
-            .step { padding: 28px 0; }
-
-            .about-stats {
-                grid-template-columns: 1fr 1fr;
-            }
+            .step { padding: 28px 0; border-bottom: 1.5px solid var(--border); }
+            .step:last-child { border-bottom: none; }
 
             .form-row { grid-template-columns: 1fr; }
-
             .footer-inner { flex-direction: column; text-align: center; }
             .footer-links { justify-content: center; }
         }
 
         @media (max-width: 480px) {
             .hero h1 { letter-spacing: -1px; }
-            .section-title { letter-spacing: -0.8px; }
             .about-stats { grid-template-columns: 1fr; }
-            .stat:nth-child(2n) { border-right: 1.5px solid var(--border); }
-            .stat:nth-child(3) { border-bottom: 1.5px solid var(--border); }
-            .stat { border-right: 1.5px solid var(--border); }
-            .stat:nth-child(4) { border-bottom: none; border-right: 1.5px solid var(--border); }
+            .stat { border-right: none !important; }
+            .stat:nth-child(3) { border-bottom: 1.5px solid var(--border) !important; }
+            .stat:nth-child(4) { border-bottom: none !important; }
         }
     </style>
 </head>
@@ -612,12 +594,12 @@
     <a href="#" class="nav-logo">Yer<span>.AI</span></a>
     <ul class="nav-links">
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proceso">Como trabajamos</a></li>
+        <li><a href="#proceso">Cómo trabajamos</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#contacto">Contacto</a></li>
     </ul>
     <a href="#contacto" class="nav-cta">Hablar con nosotros</a>
-    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menú">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
             <line x1="3" y1="6" x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -628,7 +610,7 @@
 
 <div class="mobile-menu" id="mobileMenu">
     <a href="#servicios" onclick="closeMenu()">Servicios</a>
-    <a href="#proceso" onclick="closeMenu()">Como trabajamos</a>
+    <a href="#proceso" onclick="closeMenu()">Cómo trabajamos</a>
     <a href="#nosotros" onclick="closeMenu()">Nosotros</a>
     <a href="#contacto" onclick="closeMenu()">Contacto</a>
 </div>
@@ -636,11 +618,11 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <div class="hero-badge">Agencia de IA &middot; Mallorca</div>
-        <h1>Tu negocio no<br>deberia depender<br>de <em>tu disponibilidad</em></h1>
-        <p>Disenamos agentes de inteligencia artificial y automatizaciones a medida para que tu empresa atienda clientes, gestione procesos y genere resultados las 24 horas del dia.</p>
+        <div class="hero-badge">Agencia de IA &nbsp;&middot;&nbsp; Mallorca</div>
+        <h1>Tu negocio no debería<br>depender de <em>tu disponibilidad</em></h1>
+        <p>Diseñamos agentes de inteligencia artificial y automatizaciones a medida para que tu empresa atienda clientes, gestione procesos y genere resultados las 24 horas del día.</p>
         <div class="hero-actions">
-            <a href="#contacto" class="btn-primary">Solicitar informacion</a>
+            <a href="#contacto" class="btn-primary">Solicitar información</a>
             <a href="#servicios" class="btn-secondary">Ver servicios</a>
         </div>
     </div>
@@ -658,22 +640,22 @@
             <div class="service-card">
                 <div class="service-number">01</div>
                 <h3>Agentes de IA</h3>
-                <p>Asistentes virtuales que atienden consultas, cualifican clientes y gestionan reservas por WhatsApp o desde tu web, sin necesidad de intervencion humana.</p>
+                <p>Asistentes virtuales que atienden consultas, cualifican clientes y gestionan reservas por WhatsApp o desde tu web, sin necesidad de intervención humana.</p>
             </div>
             <div class="service-card">
                 <div class="service-number">02</div>
                 <h3>Desarrollo web</h3>
-                <p>Sitios profesionales, rapidos y adaptados a cualquier dispositivo. Disenados para convertir visitas en clientes y posicionar tu negocio en buscadores.</p>
+                <p>Sitios profesionales, rápidos y adaptados a cualquier dispositivo. Diseñados para convertir visitas en clientes y posicionar tu negocio en buscadores.</p>
             </div>
             <div class="service-card">
                 <div class="service-number">03</div>
-                <h3>SEO y visibilidad digital</h3>
-                <p>Posicionamiento en Google, directorios especializados y motores de busqueda de IA. Tu empresa, visible donde estan tus clientes.</p>
+                <h3>SEO y posicionamiento</h3>
+                <p>Posicionamiento en Google, directorios especializados y motores de búsqueda de IA. Tu empresa, visible donde están tus clientes.</p>
             </div>
             <div class="service-card">
                 <div class="service-number">04</div>
                 <h3>Automatizaciones</h3>
-                <p>Flujos de trabajo que conectan tus herramientas y eliminan tareas repetitivas. Menos tiempo en procesos manuales, mas tiempo en lo que importa.</p>
+                <p>Flujos de trabajo que conectan tus herramientas y eliminan tareas repetitivas. Menos tiempo en procesos manuales, más tiempo en lo que importa.</p>
             </div>
         </div>
     </div>
@@ -684,31 +666,31 @@
     <div class="container">
         <div class="process-header">
             <div>
-                <div class="section-label">Como trabajamos</div>
-                <h2 class="section-title">Simple, directo<br>y sin rodeos</h2>
+                <div class="section-label">Cómo trabajamos</div>
+                <h2 class="section-title">Simple, directo y sin rodeos</h2>
             </div>
-            <p style="color: var(--text-secondary); font-size: 0.975rem; line-height: 1.78;">Cada proyecto empieza por entender tu negocio. No hay plantillas ni soluciones genericas: todo lo que disenamos parte de lo que tu empresa necesita realmente.</p>
+            <p style="color: var(--text-secondary); font-size: 0.975rem; line-height: 1.78; align-self: end;">Cada proyecto empieza por entender tu negocio. No hay plantillas ni soluciones genéricas: todo lo que diseñamos parte de lo que tu empresa necesita realmente.</p>
         </div>
         <div class="process-grid">
             <div class="step">
                 <div class="step-number">01</div>
-                <h3>Reunion inicial</h3>
-                <p>Analizamos tu negocio, tus procesos actuales y donde la automatizacion puede generar mas impacto. Sin compromisos ni tecnicismos.</p>
+                <h3>Reunión inicial</h3>
+                <p>Analizamos tu negocio, tus procesos actuales y dónde la automatización puede generar más impacto. Sin compromisos ni tecnicismos.</p>
             </div>
             <div class="step">
                 <div class="step-number">02</div>
                 <h3>Propuesta a medida</h3>
-                <p>Disenamos una solucion especifica para tu caso, con alcance, plazos y coste claros desde el principio.</p>
+                <p>Diseñamos una solución específica para tu caso, con alcance, plazos y coste claros desde el principio.</p>
             </div>
             <div class="step">
                 <div class="step-number">03</div>
-                <h3>Implementacion</h3>
-                <p>Desarrollamos e integramos la solucion en tus sistemas actuales. Te mantenemos informado en cada fase del proceso.</p>
+                <h3>Implementación</h3>
+                <p>Desarrollamos e integramos la solución en tus sistemas actuales. Te mantenemos informado en cada fase del proceso.</p>
             </div>
             <div class="step">
                 <div class="step-number">04</div>
                 <h3>Soporte continuo</h3>
-                <p>Una vez en marcha, hacemos seguimiento, ajustes y mejoras para que el sistema rinda al maximo a lo largo del tiempo.</p>
+                <p>Una vez en marcha, hacemos seguimiento, ajustes y mejoras para que el sistema rinda al máximo a lo largo del tiempo.</p>
             </div>
         </div>
     </div>
@@ -720,10 +702,10 @@
         <div class="about-grid">
             <div class="about-text">
                 <div class="section-label">Nosotros</div>
-                <h2 class="section-title">IA aplicada,<br>no teoria</h2>
-                <p>Yer.AI es una agencia de automatizacion e inteligencia artificial con base en Mallorca. Trabajamos con empresas de distintos sectores para implementar soluciones que funcionan en el mundo real.</p>
-                <p>No vendemos tecnologia por vender. Cada proyecto parte de un problema concreto y termina con una solucion que puedes medir. Usamos las herramientas adecuadas para cada caso, y solo las que tienen sentido.</p>
-                <p>Nuestro enfoque es practico: pocos proyectos a la vez, bien hechos, con resultados claros para el cliente.</p>
+                <h2 class="section-title">IA aplicada,<br>no teoría</h2>
+                <p>Yer.AI es una agencia de automatización e inteligencia artificial con base en Mallorca. Trabajamos con empresas de distintos sectores para implementar soluciones que funcionan en el mundo real.</p>
+                <p>No vendemos tecnología por vender. Cada proyecto parte de un problema concreto y termina con una solución que puedes medir. Usamos las herramientas adecuadas para cada caso, y solo las que tienen sentido.</p>
+                <p>Nuestro enfoque es práctico: pocos proyectos a la vez, bien hechos, con resultados claros para el cliente.</p>
             </div>
             <div class="about-stats">
                 <div class="stat">
@@ -731,8 +713,8 @@
                     <div class="stat-label">Disponibilidad de los agentes implementados</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">-80%</div>
-                    <div class="stat-label">Reduccion de tareas manuales en clientes</div>
+                    <div class="stat-number">&#8722;80%</div>
+                    <div class="stat-label">Reducción de tareas manuales en clientes</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">&lt;48h</div>
@@ -740,7 +722,7 @@
                 </div>
                 <div class="stat">
                     <div class="stat-number">100%</div>
-                    <div class="stat-label">Soluciones a medida, sin plantillas genericas</div>
+                    <div class="stat-label">Soluciones a medida, sin plantillas genéricas</div>
                 </div>
             </div>
         </div>
@@ -754,18 +736,18 @@
             <div class="contact-info">
                 <div class="section-label">Contacto</div>
                 <h2 class="section-title">Hablemos</h2>
-                <p class="section-subtitle">Cuentanos en que estas trabajando. Te respondemos en menos de 24 horas.</p>
+                <p class="section-subtitle" style="margin-bottom: 40px;">Cuéntanos en qué estás trabajando. Te respondemos en menos de 24 horas.</p>
                 <div class="contact-detail">
-                    <span>Ubicacion</span>
-                    <span>Arenal de Llucmajor, Mallorca</span>
+                    <span class="detail-label">Ubicación</span>
+                    <span class="detail-value">Arenal de Llucmajor, Mallorca</span>
                 </div>
                 <div class="contact-detail">
-                    <span>Email</span>
-                    <span>yerandritz@gmail.com</span>
+                    <span class="detail-label">Email</span>
+                    <span class="detail-value">yerandritz@gmail.com</span>
                 </div>
                 <div class="contact-detail">
-                    <span>Respuesta</span>
-                    <span>Menos de 24 horas laborables</span>
+                    <span class="detail-label">Tiempo de respuesta</span>
+                    <span class="detail-value">Menos de 24 horas laborables</span>
                 </div>
             </div>
             <form class="contact-form" onsubmit="handleSubmit(event)">
@@ -784,19 +766,19 @@
                     <input id="empresa" type="text" placeholder="Nombre de tu empresa o negocio">
                 </div>
                 <div class="form-group">
-                    <label for="servicio">Que necesitas</label>
+                    <label for="servicio">Qué necesitas</label>
                     <select id="servicio">
                         <option value="">Selecciona un servicio</option>
                         <option>Agente de IA para WhatsApp o web</option>
                         <option>Desarrollo web</option>
-                        <option>SEO y visibilidad digital</option>
+                        <option>SEO y posicionamiento</option>
                         <option>Automatizaciones</option>
-                        <option>No lo tengo claro todavia</option>
+                        <option>No lo tengo claro todavía</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" placeholder="Cuentanos brevemente tu proyecto o necesidad..."></textarea>
+                    <textarea id="mensaje" placeholder="Cuéntanos brevemente tu proyecto o necesidad..."></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Enviar mensaje</button>
             </form>
