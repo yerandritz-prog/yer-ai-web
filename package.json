@@ -1,0 +1,12 @@
+{
+  "name": "yer-ai-web",
+  "version": "1.0.0",
+  "description": "Yer.AI Agency Landing Page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
